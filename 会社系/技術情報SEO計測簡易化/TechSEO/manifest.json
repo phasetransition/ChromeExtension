@@ -1,0 +1,16 @@
+{
+  "name": "技術情報SEO計測用便利ツール",
+  "version": "1.0",
+  "description": "技術情報SEOの検索順位チェックをするサイトを対象ページ全部に対して一気に確認できるようにするツール。",
+  "content_scripts": [
+    {
+      "matches": ["http://www.seotools.jp/001_seoanalyze/*"],
+      "js": ["jquery-1.7.1.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },    
+  "permissions": ["*"],
+  "background_page": "background.html"
+}

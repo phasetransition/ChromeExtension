@@ -1,0 +1,12 @@
+{
+  "name": "Tokyo-Hot: Cancel the alert for right click on a link",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://www.tokyo-hot.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["*"]
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+            <script src="jquery-1.7.1.min.js"></script>
+		<script src="json.js"></script>
+		<script src="top.js"></script>
+		<link rel="stylesheet" type="text/css" href="top.css">
+		<title>ページタイトルワカール</title>
+	</head>
+	<body>
+		<textarea id="urllist" cols=50 rows=10>調べたいURLを列挙してください。</textarea>
+		<br>
+		<br>
+		<button id="submit" onclick="checkTitle()"><strong>確認開始</strong></button>
+		<br>
+		<div class="note">
+		<ul>
+		<li><span>表示順は入力順と異なる可能性があります。</span></li>
+		<li><span>行単位で再確認できます。（表示結果をダブルクリック）</span></li>
+		</ul>
+		</div>
+                <table id="result" style="display:none"></table>
+	</body>
+</html>

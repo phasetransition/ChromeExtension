@@ -1,0 +1,12 @@
+{
+  "name": "iGoogle omit chat window",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.co.jp/ig*"],
+      "js": ["jquery-1.7.1.min.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["*"]
+}

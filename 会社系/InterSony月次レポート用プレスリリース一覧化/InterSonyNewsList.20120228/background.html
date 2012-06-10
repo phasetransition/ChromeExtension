@@ -1,0 +1,9 @@
+//In the background page:
+<html>
+  <script>
+    //React when a browser action's icon is clicked.
+    chrome.browserAction.onClicked.addListener(function(tab) {
+		chrome.tabs.sendRequest(tab.id, {dummy: "hello"}, function(response){});
+    });
+  </script>
+</html>

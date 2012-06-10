@@ -1,0 +1,23 @@
+//In the background page:
+<html>
+	<head>
+		<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="json.js"></script>
+                <script type="text/javascript">
+                <!--
+                    //React when a browser action's icon is clicked.
+                    chrome.browserAction.onClicked.addListener(function(tab) {
+                            chrome.tabs.create({url:"./top.html",active:true});
+                    });
+                    //Receive request
+                    chrome.extension.onRequest.addListener(function(request, sender, callback) {
+                            var targetID;
+                            chrome.tabs.create({url:request,active:false},function(b){
+                                    targetID = b.id;
+                                    callback(targetID);
+                            });
+                    });
+                //-->
+                </script>
+	</head>
+</html>

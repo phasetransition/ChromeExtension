@@ -1,0 +1,12 @@
+{
+  "name": "Set id and password on iGoogle login page",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://accounts.google.com/ServiceLogin*"],
+      "js": ["jquery-1.7.1.min.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["*"]
+}
