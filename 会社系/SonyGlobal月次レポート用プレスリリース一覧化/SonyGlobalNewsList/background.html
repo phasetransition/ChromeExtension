@@ -1,0 +1,13 @@
+//In the background page:
+<html>
+  <script>
+    //React when a browser action's icon is clicked.
+    chrome.browserAction.onClicked.addListener(function(tab) {
+		if(tab.url.match(/http:\/\/www.sony.net\/SonyInfo\/News\/Press\/*/)){
+			chrome.tabs.sendRequest(tab.id, {dummy: "hello"}, function(response){});
+		} else {
+			chrome.tabs.create({url:"http://www.sony.net/SonyInfo/News/Press/",active:true});
+    	}
+	});
+  </script>
+</html>
