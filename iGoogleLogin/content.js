@@ -1,2 +1,2 @@
-document.getElementById('Email').value = 'phasetransition';
-document.getElementById('Passwd').value = 'sqlminus1';
+document.getElementById('Email').value = '********';
+document.getElementById('Passwd').value = '********';
