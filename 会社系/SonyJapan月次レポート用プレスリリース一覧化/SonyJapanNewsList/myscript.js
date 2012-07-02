@@ -22,7 +22,7 @@ chrome.extension.onRequest.addListener(
 				if(href.match(/^http/)) {
 					tr = tr + "<td>" + href  + "</td>";
 				} else {
-					tr = tr + "<td>http://" + location.hostname  + href + "</td>";
+					tr = tr + "<td>http://" + location.hostname  + href.replace("../","/SonyInfo/News/Press/") + "</td>";
 				}
 			});
 			tr = tr + '</tr>'
