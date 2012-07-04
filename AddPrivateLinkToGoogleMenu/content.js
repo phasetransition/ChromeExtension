@@ -1,5 +1,4 @@
 a = document.getElementById('gbzc');
-window.alert(a);
 
 var element = document.createElement('li');
 element.setAttribute('class','gbt');
