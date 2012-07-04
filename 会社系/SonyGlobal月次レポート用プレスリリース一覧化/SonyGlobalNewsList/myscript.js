@@ -1,3 +1,17 @@
+Month = new Array();
+Month["Jan"] = "01";
+Month["Feb"] = "02";
+Month["Mar"] = "03";
+Month["Apr"] = "04";
+Month["May"] = "05";
+Month["Jun"] = "06";
+Month["Jul"] = "07";
+Month["Aug"] = "08";
+Month["Sep"] = "09";
+Month["Oct"] = "10";
+Month["Nov"] = "11";
+Month["Dec"] = "12";
+
 chrome.extension.onRequest.addListener(
 	function(request, sender, sendResponse) {
 		if($('#includeHeader').css('display') == "none"){
@@ -5,6 +19,7 @@ chrome.extension.onRequest.addListener(
 			return;
 		}
 		$('div').hide();
+		$('img').hide();
 		var tbl = document.createElement("table");
 		/*var container = document.createElement("div");*/
 		tbl.id = "feedList";
@@ -13,8 +28,10 @@ chrome.extension.onRequest.addListener(
 			var tr = "<tr>";
 			$(this).find('div.date').each(function(){
 				var temp = $(this).text();
-				var temp2 = temp.match(/\d{4}|\d{2}/g);
-				tr = tr + "<td>" + temp2[0] + "." + temp2[1] + "." + temp2[2] + "</td>";
+				var temp0 = temp.replace(String.fromCharCode(160)," ");
+				var temp1 = temp0.replace(",","");
+				var temp2 = temp1.split(" ");
+				tr = tr + "<td>" + temp2[2] + "." + Month[temp2[0].slice(0,3)] + "." + temp2[1] + "</td>";
 			});
 			$(this).find('a').each(function(){
 				tr = tr + "<td>" + $(this).text() + "</td>"
@@ -22,7 +39,7 @@ chrome.extension.onRequest.addListener(
 				if(href.match(/^http/)) {
 					tr = tr + "<td>" + href  + "</td>";
 				} else {
-					tr = tr + "<td>http://" + location.hostname  + href.replace("../","/SonyInfo/News/Press/") + "</td>";
+					tr = tr + "<td>" + location + href.replace("index.html","") + "</td>";
 				}
 			});
 			tr = tr + '</tr>'

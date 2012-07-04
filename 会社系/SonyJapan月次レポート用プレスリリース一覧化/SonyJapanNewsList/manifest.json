@@ -1,6 +1,6 @@
 {
   "name": "Sony Japanレポート用ニュース一覧化ツール",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Sony Japanのニュース一覧をブラウザで表示した状態で、ブラウザ右上のアイコンを押すとEXCELに貼り付けられる一覧に整形できます。",
   "browser_action": {
     "default_icon": "icon.png",
