@@ -1,8 +1,5 @@
-$('div.kdSidebar').remove();
-$('a.kdSidebarButton').remove();
-$('div.kdMainContainer').css('margin-left','5px');
-
-a = $('ol.gbtc')[0]
+a = document.getElementById('gbzc');
+window.alert(a);
 
 var element = document.createElement('li');
 element.setAttribute('class','gbt');

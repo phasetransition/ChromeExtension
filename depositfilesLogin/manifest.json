@@ -7,6 +7,5 @@
       "js": ["jquery-1.7.1.min.js", "content.js"],
       "run_at": "document_end"
     }
-  ],
-  "permissions": ["*"]
+  ]
 }

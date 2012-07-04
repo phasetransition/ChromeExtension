@@ -1,12 +1,11 @@
 {
-  "name": "iGoogle omit chat window",
+  "name": "Add private link to Google menu",
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://www.google.co.jp/ig*"],
+      "matches": ["https://www.google.co.jp/*"],
       "js": ["jquery-1.7.1.min.js", "content.js"],
       "run_at": "document_end"
     }
-  ],
-  "permissions": ["*"]
+  ]
 }
