@@ -36,7 +36,15 @@ if ((location.href.match(/http:\/\/imageporter.com/)) || (location.href.match(/h
 
 if (location.href.match(/http:\/\/www.stooorage.com/)) {
 	$('div#page_body').find('img').each(function(){
-		if($(this).attr('src').match(/img2.stooorage.com\/images/)) {
+		if($(this).attr('src').match(/img[0-9].stooorage.com\/images/)) {
+			location.href = $(this).attr('src');
+		}
+	});
+}
+
+if (location.href.match(/http:\/\/imagetwist.com/)) {
+	$('img.pic').each(function(){
+		if($(this).attr('src').match(/img\d+.imagetwist.com\/i/)) {
 			location.href = $(this).attr('src');
 		}
 	});

@@ -3,7 +3,7 @@ a = document.getElementById('gbzc');
 var element = document.createElement('li');
 element.setAttribute('class','gbt');
 element.setAttribute('id','appendedByChromeExtention1');
-element.innerHTML = '<a class="gbzt" href="http://javblog.org/" target="_blank"><span class="gbtb2"></span><span class="gbts">javblog</span></a>';
+element.innerHTML = '<a class="gbzt" href="http://javblog.org/category/jav/" target="_blank"><span class="gbtb2"></span><span class="gbts">javblog</span></a>';
 a.appendChild(element);
 
 var element = document.createElement('li');
