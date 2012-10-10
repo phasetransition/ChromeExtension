@@ -1,6 +1,7 @@
 {
   "name": "技術情報SEO計測用便利ツール",
-  "version": "1.0",
+  "version": "2.0",
+  "manifest_version": 2,
   "description": "技術情報SEOの検索順位チェックをするサイトを対象ページ全部に対して一気に確認できるようにするツール。",
   "content_scripts": [
     {
@@ -11,6 +12,7 @@
   "browser_action": {
     "default_icon": "icon.png"
   },    
-  "permissions": ["*"],
-  "background_page": "background.html"
+  "background": {
+    "page": "background.html"
+  }
 }
