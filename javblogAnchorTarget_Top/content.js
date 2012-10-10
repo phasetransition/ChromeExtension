@@ -1,0 +1,1 @@
+$('a[target=_BLANK]').each(function(){this.target="_top";});

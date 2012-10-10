@@ -1,9 +1,9 @@
 {
-  "name": "Set id and password on depositfiles.com login page",
+  "name": "Change A tag's attribute target='_top'",
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://depositfiles.com/*"],
+      "matches": ["http://javblog.org/*"],
       "js": ["jquery-1.7.1.min.js", "content.js"],
       "run_at": "document_end"
     }

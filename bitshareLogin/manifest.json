@@ -1,0 +1,11 @@
+{
+  "name": "Set id and password on bitshare.com login page",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://bitshare.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
