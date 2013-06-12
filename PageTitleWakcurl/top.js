@@ -1,6 +1,21 @@
+var targetTitle = new Array();
+var timerID = new Array();
+var elmTbody;
 window.onload = function() {
-var txtArea = document.getElementById('urllist');
-txtArea.addEventListener('mousedown', function(){if (this.value == this.defaultValue) this.value = "";}, false);
+	var txtArea = document.getElementById('urllist');
+	txtArea.addEventListener('mousedown', function(){if (this.value == this.defaultValue) this.value = "";}, false);
+	var submitButton = document.getElementById('submit');
+	submitButton.addEventListener('click', function(){checkTitle();}, false);
+	chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+		if(request.messageId == "bkgd2top"){
+			var element = document.createElement('tr');
+			element.id = request.tabId;
+			element.innerHTML = '<td class="cUrl">' + request.url + '</td><td class="cTitle">' + request.title + '</td>';
+			elmTbody = $('#result').find('tbody');
+			elmTbody[0].appendChild(element);
+			document.getElementById(request.tabId).addEventListener('dblclick',function(){checkThisTitle(request.tabId);},false);
+		}
+	});
 }
 
 function checkTitle(){
@@ -9,9 +24,6 @@ function checkTitle(){
 	$('table#result').append('<tbody><tr><th>URL</th><th>TITLE</th></tr></tbody>');
 	var urlArray = $('#urllist').val().split('\n');
 	/* convert array data to JSON text */
-	var targetTitle = new Array();
-	var timerID = new Array();
-        var elmTbody;
 	for (var i = 0; i < urlArray.length; i++){
 		if (urlArray[i] == "") {
 			continue;
@@ -26,23 +38,7 @@ function checkTitle(){
                         elmTbody[0].appendChild(element);
 			continue;
 		}
-		chrome.extension.sendRequest(urlArray[i],function(a){
-			timerID[a] = 0
-			timerID[a] = setInterval(function(){chrome.tabs.get(a,function(c){targetTitle[a] = c.title;
-																if (targetTitle[a]) {
-																	clearInterval(timerID[a]);
-																	var element = document.createElement('tr');
-																	element.id = a;
-																	element.innerHTML = '<td class="cUrl">' + c.url + '</td><td class="cTitle">' + targetTitle[a] + '</td>';
-																	elmTbody = $('#result').find('tbody');
-                                                                                                                                        elmTbody[0].appendChild(element);
-																	document.getElementById(a).addEventListener('dblclick',function(){checkThisTitle(a);},false);
-																	//$('table').append('<tr class="normal" id="'+ a +'"><td class="cUrl">' + c.url + '</td><td class="cTitle">' + targetTitle[a] + '</td></tr>');
-																	chrome.tabs.remove(a);
-																}
-													});
-						},2000);
-		});
+		chrome.runtime.sendMessage({messageId: "getTitle", url: urlArray[i]});
 	}
 }
 
@@ -68,16 +64,9 @@ function checkThisTitle(id){
 		strUrl = 'http://' + tdUrl.innerText;
 	}
 
-	chrome.extension.sendRequest(strUrl,function(a){
-		timerID = 0
-		timerID = setInterval(function(){chrome.tabs.get(a,function(c){targetTitle = c.title;
-															if (targetTitle) {
-																clearInterval(timerID);
-																tdTitle.innerText = targetTitle;
-																chrome.tabs.remove(a);
-																document.getElementById(id).className = 'normal';
-															}
-												});
-					},1000);
-	});
+	chrome.runtime.sendMessage({messageId: "getTitle", url: strUrl});
+
+    var dom_obj=document.getElementById(id);
+    var dom_obj_parent=dom_obj.parentNode;
+    dom_obj_parent.removeChild(dom_obj);
 }

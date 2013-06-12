@@ -7,8 +7,6 @@
     "default_icon": "icon.png",
     "default_title": "ページタイトルワカール"
   },    
-  "background": {
-    "page": "background.html"
-  },
+  "background": {"scripts": ["jquery-1.7.1.min.js","json.js","background.js","top.js"],"persistent": false},
   "permissions": ["tabs"]
 }

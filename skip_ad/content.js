@@ -14,6 +14,7 @@ for (var i = 0; i < ar.length ;i ++) {
                         for (var k = 0; k < url.length; k ++) {
                             if(url[k].match(/http:\/\//)) {
                                     target = url[k];
+                                    /* window.alert(target); */
                                     break;
                             }
                         }
