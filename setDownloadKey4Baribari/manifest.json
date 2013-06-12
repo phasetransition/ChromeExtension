@@ -1,0 +1,12 @@
+{
+  "name": "Set downloadkey for Baribari",
+  "version": "2.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://hetare.ddo.jp/loda/src/*.html","http://ymir.la/loda/src/*.html","http://zipdkr.net/loda/src/*.html","http://upspace.org/loda/src/*.html"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
