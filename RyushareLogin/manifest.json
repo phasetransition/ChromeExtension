@@ -1,0 +1,12 @@
+{
+  "name": "Set id and password on Ryushare.com login page",
+  "version": "2.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://ryushare.com/login.python"],
+      "js": ["jquery-1.7.1.min.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
