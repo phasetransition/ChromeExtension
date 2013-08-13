@@ -31,6 +31,10 @@ if ((location.href.match(/http:\/\/imgchili.com/)) && !(location.href.match(/htt
 	location.href = $('#show_image').attr('src');
 }
 
+if (location.href.match(/http:\/\/imgchili.net\/show/)) {
+	location.href = $('img#show_image').attr('src');
+}
+
 if ((location.href.match(/http:\/\/imageporter.com/)) || (location.href.match(/http:\/\/www.imageporter.com/))) {
 	location.href = $('img#knjdycbs87nbd').attr('src');
 }
