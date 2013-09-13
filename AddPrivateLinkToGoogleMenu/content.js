@@ -8,12 +8,6 @@ a.appendChild(element);
 
 var element = document.createElement('li');
 element.setAttribute('class','gbt');
-element.setAttribute('id','appendedByChromeExtention2');
-element.innerHTML = '<a class="gbzt" href="http://91javporn.com" target="_blank"><span class="gbtb2"></span><span class="gbts">91javporn</span></a>';
-a.appendChild(element);
-
-var element = document.createElement('li');
-element.setAttribute('class','gbt');
 element.setAttribute('id','appendedByChromeExtention3');
 element.innerHTML = '<a class="gbzt" href="http://www.intporn.com/forums/asian-jav-movies" target="_blank"><span class="gbtb2"></span><span class="gbts">intporn</span></a>';
 a.appendChild(element);
@@ -34,12 +28,6 @@ var element = document.createElement('li');
 element.setAttribute('class','gbt');
 element.setAttribute('id','appendedByChromeExtention6');
 element.innerHTML = '<a class="gbzt" href="http://www.aventertainments.com" target="_blank"><span class="gbtb2"></span><span class="gbts">AVE</span></a>';
-a.appendChild(element);
-
-var element = document.createElement('li');
-element.setAttribute('class','gbt');
-element.setAttribute('id','appendedByChromeExtention6');
-element.innerHTML = '<a class="gbzt" href="http://eliiite.com/" target="_blank"><span class="gbtb2"></span><span class="gbts">eliiite</span></a>';
 a.appendChild(element);
 
 var del = document.getElementById('gb_119').parentNode; del.parentNode.removeChild(del);
