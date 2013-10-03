@@ -12,11 +12,13 @@ element.setAttribute('id','appendedByChromeExtention3');
 element.innerHTML = '<a class="gb_b" href="http://www.intporn.com/forums/asian-jav-movies" target="_blank">intporn</a>';
 a.appendChild(element);
 
+/*
 var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention4');
 element.innerHTML = '<a class="gb_b" href="http://hugejav4u.net/" target="_blank">hugejav4u</a>';
 a.appendChild(element);
+*/
 
 var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
