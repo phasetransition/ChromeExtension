@@ -1,2 +1,2 @@
-document.getElementById('loginEmail').value = "phasetransition@gmail.com";
-document.getElementById('loginPassword').value = "xxxxxx";
+document.getElementsByName('email')[0].value = "xxxx";
+document.getElementsByName('password')[0].value = "xxxx";

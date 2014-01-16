@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "content_scripts": [
     {
-      "matches": ["*://hootsuite.com/"],
+      "matches": ["*://hootsuite.com/login"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
