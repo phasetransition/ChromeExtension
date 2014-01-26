@@ -83,3 +83,7 @@ if (location.href.match(/http:\/\/[\w\d]{4,10}.imagevenue.com/)) {
 	a.innerHTML="";
 	a.appendChild(element);
 }
+
+if (location.href.match(/http:\/\/www.imgbabes.com/)) {
+	location.href = $('img#this_image').attr('src');
+}
