@@ -87,3 +87,13 @@ if (location.href.match(/http:\/\/[\w\d]{4,10}.imagevenue.com/)) {
 if (location.href.match(/http:\/\/www.imgbabes.com/)) {
 	location.href = $('img#this_image').attr('src');
 }
+
+if (location.href.match(/http:\/\/www.allanalpass.com/)) {
+	var timerID = setInterval(
+				function(){
+						if(document.getElementById('skiplink').getAttribute('href')){
+							clearInterval(timerID);
+							location = document.getElementById('skiplink').href;
+						}
+				},100);
+}
