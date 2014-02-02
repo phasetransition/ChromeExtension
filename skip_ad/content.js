@@ -88,7 +88,7 @@ if (location.href.match(/http:\/\/www.imgbabes.com/)) {
 	location.href = $('img#this_image').attr('src');
 }
 
-if (location.href.match(/http:\/\/www.allanalpass.com/)) {
+if (location.href.match(/http:\/\/[A-Za-z0-9_]+.allanalpass.com/)) {
 	var timerID = setInterval(
 				function(){
 						if(document.getElementById('skiplink').getAttribute('href')){
