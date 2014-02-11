@@ -88,7 +88,7 @@ if (location.href.match(/http:\/\/www.imgbabes.com/)) {
 	location.href = $('img#this_image').attr('src');
 }
 
-if (location.href.match(/http:\/\/[A-Za-z0-9_]+.allanalpass.com/)) {
+if ((location.href.match(/http:\/\/[A-Za-z0-9_]+.allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9_]+.www.allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9_-]+.www.linkbucksdns.com/))) {
 	var timerID = setInterval(
 				function(){
 						if(document.getElementById('skiplink').getAttribute('href')){
@@ -96,4 +96,12 @@ if (location.href.match(/http:\/\/[A-Za-z0-9_]+.allanalpass.com/)) {
 							location = document.getElementById('skiplink').href;
 						}
 				},100);
+}
+
+if ((location.href.match(/http:\/\/imgtiger.com/)) || (location.href.match(/http:\/\/imgdino.com/))) {
+	location.href = $('img#cursor_lupa').attr('src');
+}
+
+if (location.href.match(/http:\/\/pimpandhost.com/)) {
+	location.href = $('img#image').attr('src');
 }
