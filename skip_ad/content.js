@@ -58,7 +58,10 @@ if (location.href.match(/http:\/\/imagetwist.com/)) {
 if (location.href.match(/http:\/\/www.imagebam.com\/image/)) {
 	$('a.buttonblue').each(function(){
 		if($(this).attr('href').match(/imagebam.com\/download/)) {
-			document.write('<img src="' + $(this).attr('href') + '"></img>');
+/*
+			document.write('<img src="' + $(this).attr('href').split("?")[0] + '"></img>');
+*/
+	location.href = $(this).attr('href').split("?")[0];
 		}
 	});
 }
@@ -88,7 +91,7 @@ if (location.href.match(/http:\/\/www.imgbabes.com/)) {
 	location.href = $('img#this_image').attr('src');
 }
 
-if ((location.href.match(/http:\/\/[A-Za-z0-9_]+.allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9_]+.www.allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9_-]+.www.linkbucksdns.com/))) {
+if ((location.href.match(/http:\/\/[A-Za-z0-9._-]+allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9._-]+www.allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9._-]+www.linkbucksdns.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9._-]+galleries.bz/))) {
 	var timerID = setInterval(
 				function(){
 						if(document.getElementById('skiplink').getAttribute('href')){
