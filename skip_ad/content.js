@@ -94,11 +94,17 @@ if (location.href.match(/http:\/\/www.imgbabes.com/)) {
 if ((location.href.match(/http:\/\/[A-Za-z0-9._-]+allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9._-]+www.allanalpass.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9._-]+www.linkbucksdns.com/)) || (location.href.match(/http:\/\/[A-Za-z0-9._-]+galleries.bz/))) {
 	var timerID = setInterval(
 				function(){
-						if(document.getElementById('skiplink').getAttribute('href')){
-							clearInterval(timerID);
-							location = document.getElementById('skiplink').href;
-						}
-				},100);
+					if(document.getElementById('skiplink').href){
+						/*
+						var myevent = document.createEvent('MouseEvents');
+						myevent.initEvent('click', false, true);
+						*/
+						clearInterval(timerID);
+						var evt = document.createEvent("MouseEvents");
+						evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+						document.getElementById('skiplink').dispatchEvent(evt);
+					}
+				},200);
 }
 
 if ((location.href.match(/http:\/\/imgtiger.com/)) || (location.href.match(/http:\/\/imgdino.com/))) {
@@ -107,4 +113,8 @@ if ((location.href.match(/http:\/\/imgtiger.com/)) || (location.href.match(/http
 
 if (location.href.match(/http:\/\/pimpandhost.com/)) {
 	location.href = $('img#image').attr('src');
+}
+
+if (location.href.match(/http:\/\/imgbox.com/)) {
+	location.href=document.getElementById('img').src;
 }
