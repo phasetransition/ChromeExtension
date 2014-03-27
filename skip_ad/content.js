@@ -118,3 +118,14 @@ if (location.href.match(/http:\/\/pimpandhost.com/)) {
 if (location.href.match(/http:\/\/imgbox.com/)) {
 	location.href=document.getElementById('img').src;
 }
+
+if (location.href.match(/http:\/\/sh.st/)) {
+	var timerID = setInterval(
+				function(){
+					if( !(document.getElementById('skip_button').href.match(/http:\/\/sh.st/)) ){
+						clearInterval(timerID);
+						location.href=document.getElementById('skip_button').href;
+					}
+				},200);
+}
+

@@ -3,13 +3,13 @@ a = document.getElementById('gb').childNodes[0].childNodes[0].childNodes[0];
 var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention1');
-element.innerHTML = '<a class="gb_g" href="http://javblog.org/category/jav/" target="_blank">javblog</a>';
+element.innerHTML = '<a class="gb_g" href="http://javblog.org/category/jav/?' + new Date().getTime() + '" target="_blank">javblog</a>';
 a.appendChild(element);
 
 var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention2');
-element.innerHTML = '<a class="gb_g" href="http://latestjav.net/" target="_blank">latestjav</a>';
+element.innerHTML = '<a class="gb_g" href="http://latestjav.net/?' + new Date().getTime() + '" target="_blank">latestjav</a>';
 a.appendChild(element);
 
 var element = document.createElement('div');
