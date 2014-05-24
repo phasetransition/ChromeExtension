@@ -129,3 +129,6 @@ if (location.href.match(/http:\/\/sh.st/)) {
 				},200);
 }
 
+if (location.href.match(/http:\/\/www.pixhost.org/)) {
+	location=document.getElementById('show_image').src
+}
