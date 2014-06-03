@@ -5,7 +5,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.google.co.jp/*"],
-      "js": ["jquery-1.7.1.min.js", "content.js"],
+      "js": ["content.js"],
       "run_at": "document_end"
     }
   ]

@@ -1,5 +1,5 @@
 a = document.getElementById('gb').childNodes[0].childNodes[0].childNodes[0];
-
+/*
 var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention1');
@@ -11,7 +11,7 @@ element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention2');
 element.innerHTML = '<a class="gb_g" href="http://latestjav.net/?' + new Date().getTime() + '" target="_blank">latestjav</a>';
 a.appendChild(element);
-
+*/
 var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention3');
@@ -34,4 +34,16 @@ var element = document.createElement('div');
 element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention6');
 element.innerHTML = '<a class="gb_g" href="http://www.aventertainments.com" target="_blank">AVE</a>';
+a.appendChild(element);
+/*
+var element = document.createElement('div');
+element.setAttribute('class','gb_e gb_f');
+element.setAttribute('id','appendedByChromeExtention7');
+element.innerHTML = '<a class="gb_g" href="http://havfree.com/" target="_blank">havfree</a>';
+a.appendChild(element);
+*/
+var element = document.createElement('div');
+element.setAttribute('class','gb_e gb_f');
+element.setAttribute('id','appendedByChromeExtention7');
+element.innerHTML = '<a class="gb_g" href="http://javbest.net/category/uncensored/" target="_blank">javbest.net</a>';
 a.appendChild(element);
