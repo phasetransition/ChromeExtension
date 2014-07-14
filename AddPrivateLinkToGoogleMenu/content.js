@@ -47,3 +47,9 @@ element.setAttribute('class','gb_e gb_f');
 element.setAttribute('id','appendedByChromeExtention7');
 element.innerHTML = '<a class="gb_g" href="http://javbest.net/" target="_blank">javbest.net</a>';
 a.appendChild(element);
+
+var element = document.createElement('div');
+element.setAttribute('class','gb_e gb_f');
+element.setAttribute('id','appendedByChromeExtention8');
+element.innerHTML = '<a class="gb_g" href="http://91javporn.com/" target="_blank">91javporn.com</a>';
+a.appendChild(element);
